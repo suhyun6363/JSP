@@ -1,0 +1,43 @@
+<%@ page language= "java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta charset="UTF-8">
+<title>jQuery 테스트3</title>
+<style type="text/css">
+  div#result {
+    width : 300px;
+    height : 300px;
+    border : 5px double #6699FF;
+  }
+</style>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+	  $("#b1").click(function() {
+		  $.ajax({
+			   type: "post",
+			   url: "jQPro.jsp",
+			   data: {name:$("#t1").val(), sid:$("#t2").val()},
+			   success: function(data) {	//callback 함수, data html string형태로 넘어옴
+				 $("#result").html(data);	//data가 html태그가 섞인 text, 일반 텍스트, json형태 등으로 넘어올 수 있음 
+				 alert("로드성공");
+			   },
+			   error: function() {			//callback 함수
+				 alert("로드실패");
+			   }
+	  	  });
+	  });
+  });
+</script>
+</head>
+<body>
+  이름: <input type="text" id="t1" size=5>
+  학번: <input type="text" id="t2" size=5><p>
+ <button id="b1">전송</button>
+ <div id="result">로딩 영역</div>
+</body>
+</html>

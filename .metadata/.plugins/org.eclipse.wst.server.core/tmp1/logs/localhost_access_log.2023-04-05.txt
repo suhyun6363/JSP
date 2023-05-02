@@ -1,0 +1,4 @@
+127.0.0.1 - - [05/Apr/2023:15:16:34 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [05/Apr/2023:15:16:35 +0900] "GET /LectureProject/studentForm.jsp HTTP/1.1" 200 732
+0:0:0:0:0:0:0:1 - - [05/Apr/2023:15:18:02 +0900] "POST /LectureProject/studentPro.jsp HTTP/1.1" 200 482
+0:0:0:0:0:0:0:1 - - [05/Apr/2023:15:18:02 +0900] "GET /LectureProject/uploaded/me8.jpg HTTP/1.1" 200 262298

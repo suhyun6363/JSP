@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+request.setCharacterEncoding("UTF-8");
+float num1 = Float.parseFloat(request.getParameter("num1"));
+String operator = request.getParameter("operator");
+float num2 = Float.parseFloat(request.getParameter("num2"));
+
+if (operator.equals("+")) {
+	out.println(num1 + " " + operator + " " + num2 + " = " + (num1+num2));
+	String straddCount = (String) application.getAttribute("addCounter");
+	int addCount = (straddCount == null) ? 0 : Integer.valueOf(straddCount);	
+	out.println("\n덧셈 총횟수 : " + ++addCount);
+	application.setAttribute("addCounter", String.valueOf(addCount));
+} 
+else if (operator.equals("-")) {
+	out.println(num1 + " " + operator + " " + num2 + " = " + (num1-num2));
+	/*
+	String strminCount = (String) application.getAttribute("minCounter");
+	int minCount = (strminCount == null) ? 0 : Integer.valueOf(strminCount);	
+	out.println("\n뺄셈 총횟수 : " + ++minCount);
+	application.setAttribute("minCounter", String.valueOf(minCount));
+	*/
+} 
+else if (operator.equals("*")) {
+	out.println(num1 + " " + operator + " " + num2 + " = " + (num1*num2));
+	/*
+	String strmulCount = (String) application.getAttribute("mulCounter");
+	int mulCount = (strmulCount == null) ? 0 : Integer.valueOf(strmulCount);	
+	out.println("\n곱셈 총횟수 : " + ++mulCount);
+	application.setAttribute("mulCounter", String.valueOf(mulCount));
+	*/
+} 
+else {
+	out.println(num1 + " " + operator + " " + num2 + " = " + (num1/num2));
+	/*
+	String strdivCount = (String) application.getAttribute("divCounter"); 
+	int divCount = (strdivCount == null) ? 0 : Integer.valueOf(strdivCount);	
+	out.println("\n나눗셈 총횟수 : " + ++divCount);
+	application.setAttribute("divCounter", String.valueOf(divCount));
+	*/
+}
+%>

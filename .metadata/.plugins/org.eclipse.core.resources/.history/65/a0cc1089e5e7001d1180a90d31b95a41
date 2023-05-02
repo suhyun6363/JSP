@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+request.setCharacterEncoding("UTF-8");
+float num1 = Float.parseFloat(request.getParameter("num1"));
+String operator = request.getParameter("operator");
+float num2 = Float.parseFloat(request.getParameter("num2"));
+
+if (operator.equals("+")) {
+	application.setAttribute("addCounter", 0);
+	out.println(num1 + " " + operator + " " + num2 + " = " + (num1+num2));
+	out.println("\n덧셈 총횟수 : " + application.getAttribute("addCounter"));
+	String strCount = (String) application.getAttribute("counter"); //counter 라는 필드가 존재하면 counter필드의 값을 전달
+	int count = (strCount == null) ? 0 : Integer.valueOf(strCount);	//사망연산자: (조건항) ? True실행 : False 실행
+	out.println("방문자수: " + ++count);
+	application.setAttribute("counter", String.valueOf(count));
+} 
+else if (operator.equals("-")) {
+	application.setAttribute("minCounter", 0);
+	out.println(num1 + " " + operator + " " + num2 + " = " + (num1-num2));
+	out.println("\n뺄셈 총횟수 : " + application.getAttribute("minCounter"));
+} 
+else if (operator.equals("*")) {
+	application.setAttribute("mulCounter", 0);
+	out.println(num1 + " " + operator + " " + num2 + " = " + (num1*num2));
+	out.println("\n곱셈 총횟수 : " + application.getAttribute("mulCounter"));
+} 
+else {
+	application.setAttribute("divCounter", 0);
+	out.println(num1 + " " + operator + " " + num2 + " = " + (num1/num2));
+	out.println("\n나눗셈 총횟수 : " + application.getAttribute("ㅇCounter"));
+}
+%>

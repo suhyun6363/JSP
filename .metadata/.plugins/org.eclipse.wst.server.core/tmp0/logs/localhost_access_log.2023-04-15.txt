@@ -1,0 +1,14 @@
+127.0.0.1 - - [15/Apr/2023:17:15:26 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [15/Apr/2023:17:15:28 +0900] "GET /FirstProject/studentForm2.jsp HTTP/1.1" 200 980
+0:0:0:0:0:0:0:1 - - [15/Apr/2023:17:15:42 +0900] "GET /FirstProject/studentPro.jsp?name=%EC%A0%95%EC%88%98%ED%98%84&num=01083101217&majors=%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4&hobbies=ski&hobbies=inline HTTP/1.1" 200 361
+127.0.0.1 - - [15/Apr/2023:17:25:03 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [15/Apr/2023:17:25:07 +0900] "GET /FirstProject/studentFormHome.jsp HTTP/1.1" 200 833
+0:0:0:0:0:0:0:1 - - [15/Apr/2023:17:25:49 +0900] "GET /FirstProject/studentFormHome.jsp HTTP/1.1" 200 841
+0:0:0:0:0:0:0:1 - - [15/Apr/2023:17:26:13 +0900] "GET /FirstProject/studentFormHome.jsp HTTP/1.1" 200 841
+0:0:0:0:0:0:0:1 - - [15/Apr/2023:17:28:07 +0900] "GET /FirstProject/studentFormHome.jsp HTTP/1.1" 200 841
+0:0:0:0:0:0:0:1 - - [15/Apr/2023:17:28:23 +0900] "GET /FirstProject/studentProHome.jsp?name=%EC%A0%95%EC%88%98%ED%98%84&age=23&sex=female&residence=%EA%B2%BD%EA%B8%B0%EB%8F%84 HTTP/1.1" 200 337
+0:0:0:0:0:0:0:1 - - [15/Apr/2023:17:29:29 +0900] "GET /FirstProject/studentFormHome.jsp HTTP/1.1" 200 861
+0:0:0:0:0:0:0:1 - - [15/Apr/2023:17:30:02 +0900] "GET /FirstProject/studentProHome.jsp?name=%EC%A0%95%EC%88%98%ED%98%84&age=23&sex=%EC%97%AC%EC%84%B1%EC%9E%85%EB%8B%88%EB%8B%A4&residence=%EA%B2%BD%EA%B8%B0%EB%8F%84 HTTP/1.1" 200 346
+127.0.0.1 - - [15/Apr/2023:17:30:38 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [15/Apr/2023:17:30:38 +0900] "GET /FirstProject/studentFormHome.jsp HTTP/1.1" 200 861
+0:0:0:0:0:0:0:1 - - [15/Apr/2023:17:30:48 +0900] "GET /FirstProject/studentProHome.jsp?name=%EC%9D%8C%EB%91%90%ED%97%8C&age=25&sex=%EB%82%A8%EC%84%B1%EC%9E%85%EB%8B%88%EB%8B%A4&residence=%EA%B0%95%EC%9B%90%EB%8F%84 HTTP/1.1" 200 347
